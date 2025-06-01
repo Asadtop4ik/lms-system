@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Teacher Dashboard{% endblock %}
+
+{% block content %}
+    <h2>Teacher Dashboard</h2>
+
+    <h3>Assigned Courses</h3>
+    <ul>
+        {% for course in assigned_courses %}
+            <li><a href="{% url 'course_students' course.id %}">{{ course.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Students</h5>
+                    <p class="card-text">{{ total_students }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Recent Lessons</h3>
+    <ul>
+        {% for lesson in recent_lessons %}
+            <li>{{ lesson.topic }} - {{ lesson.date }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

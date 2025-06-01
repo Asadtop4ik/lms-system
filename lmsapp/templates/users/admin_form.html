@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ action }} Admin{% endblock %}
+
+{% block content %}
+    <h2>{{ action }} Admin</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">{{ action }}</button>
+        <a href="{% url 'admin_list' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+{% endblock %}

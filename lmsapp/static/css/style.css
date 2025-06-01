@@ -1,0 +1,59 @@
+/* General styles */
+body {
+    font-family: sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.container {
+    max-width: 960px; /* Adjust as needed */
+}
+
+/* Navbar styles */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Card styles */
+.card {
+    margin-bottom: 15px;
+    border: none;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Table styles */
+.table {
+    background-color: #fff;
+}
+
+/* Form styles */
+form {
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* Alert styles */
+.alert {
+    margin-bottom: 15px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 0;
+}

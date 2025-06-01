@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Student Dashboard{% endblock %}
+
+{% block content %}
+    <h2>Student Dashboard</h2>
+
+    <h3>Enrolled Courses</h3>
+    <ul>
+        {% for enrollment in enrolled_courses %}
+            <li>{{ enrollment.course.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Attendance Average</h5>
+                    <p class="card-text">{{ attendance_avg }}%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

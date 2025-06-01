@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+    <h2>Admin Dashboard</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Teachers</h5>
+                    <p class="card-text">{{ total_teachers }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Students</h5>
+                    <p class="card-text">{{ total_students }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Courses</h5>
+                    <p class="card-text">{{ total_courses }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Active Courses</h3>
+    <ul>
+        {% for course in active_courses %}
+            <li>{{ course.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}My Attendance{% endblock %}
+
+{% block content %}
+    <h2>My Attendance</h2>
+
+    {% for data in attendance_data %}
+        <h3>{{ data.course.name }}</h3>
+        <p>Attendance Percentage: {{ data.attendance_percentage }}%</p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Lesson</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in data.attendance_records %}
+                    <tr>
+                        <td>{{ record.lesson.topic }}</td>
+                        <td>{{ record.lesson.date }}</td>
+                        <td>{{ record.status.name }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endfor %}
+{% endblock %}
